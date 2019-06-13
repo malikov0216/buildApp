@@ -30,8 +30,7 @@ func BuildApp(src, projectName string) error{
 		} else if noPackage {
 			continue
 		} else if isPackage {
-			packages = packages.Read(newSrc, projectName)
-			if packages.IsImported {
+			if packages.IsImported(newSrc, projectName) {
 				srcToBuild := GetDirectorySrc(newSrc)
 				if err := ExecuteBuild(srcToBuild); err != nil {
 					return err

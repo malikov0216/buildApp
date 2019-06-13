@@ -1,8 +1,8 @@
 package main
 
 import (
-	"log"
 	"github.com/malikov0216/buildApp/cmd"
+	"log"
 )
 
 func main () {
