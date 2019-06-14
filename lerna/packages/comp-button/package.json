@@ -1,0 +1,23 @@
+{
+  "name": "@project/comp-button",
+  "version": "1.0.0",
+  "description": "A simple button component",
+  "main": "dist/index.js",
+  "module": "dist/index.js",
+  "scripts": {
+    "transpile": "babel src -d dist"
+  },
+  "babel": {
+    "presets": [
+      "@babel/preset-env",
+      "@babel/preset-react"
+    ],
+    "env": {
+      "test": {
+        "plugins": [
+          "transform-es2015-modules-commonjs"
+        ]
+      }
+    }
+  }
+}
